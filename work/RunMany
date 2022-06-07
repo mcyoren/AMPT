@@ -1,0 +1,14 @@
+#!/bin/bash
+
+PW=$(pwd)
+
+for i in `seq 0 $1`;
+        do
+		echo "Initializing $i copy of Process"
+		sleep 5
+                gnome-terminal --title="Proc"$i -x sh -c "./RunAMPT.csh $i ;wait;"
+		sleep 5
+		echo "Ok!"
+        done    
+
+
